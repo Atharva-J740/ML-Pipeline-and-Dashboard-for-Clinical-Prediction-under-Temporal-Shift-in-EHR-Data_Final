@@ -1,0 +1,9 @@
+feature,ks_stat,p_value,drift_detected
+age,0.46658245291685807,4.943606451277395e-06,True
+systolic_blood_pressure_mean,0.25,0.05221800009190909,False
+systolic_blood_pressure_std,0.21996040910590564,0.11771454901949097,False
+diastolic_blood_pressure_mean,0.1382636655948553,0.6167451817738879,False
+heart_rate_mean,0.13780431786862654,0.6208311553317202,False
+body_temperature_mean,0.11714468396054074,0.9543074892444434,False
+glucose_mass_volume_in_blood_mean,0.22215320910973085,0.2483747894439328,False
+cholesterol_mass_volume_in_serum_or_plasma_mean,0.20433333333333334,0.24251222362145755,False

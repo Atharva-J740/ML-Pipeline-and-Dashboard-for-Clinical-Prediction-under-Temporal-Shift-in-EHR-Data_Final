@@ -1,0 +1,1001 @@
+patient_id,age,gender,ethnicity,insurance
+P0000,69,M,African American,Private
+P0001,32,M,Hispanic,Medicaid
+P0002,89,F,Asian,Medicaid
+P0003,78,M,Caucasian,Medicare
+P0004,38,M,Hispanic,Medicaid
+P0005,41,M,African American,Medicaid
+P0006,20,M,Asian,Private
+P0007,39,F,African American,Medicare
+P0008,70,M,Caucasian,Medicaid
+P0009,19,M,Asian,Medicaid
+P0010,47,M,Caucasian,Private
+P0011,55,M,Caucasian,Private
+P0012,19,F,Hispanic,Medicaid
+P0013,81,F,African American,Medicare
+P0014,77,M,Asian,Medicare
+P0015,38,M,Caucasian,Private
+P0016,50,M,Caucasian,Private
+P0017,75,M,Asian,Medicaid
+P0018,39,M,Caucasian,Private
+P0019,66,M,Hispanic,Medicaid
+P0020,76,F,Hispanic,Medicare
+P0021,59,M,Hispanic,Medicare
+P0022,77,F,Hispanic,Medicaid
+P0023,32,F,Caucasian,Private
+P0024,79,M,Asian,Medicare
+P0025,79,F,Asian,Private
+P0026,64,F,Asian,Medicare
+P0027,79,F,Asian,Medicaid
+P0028,68,F,African American,Medicaid
+P0029,72,F,Asian,Medicaid
+P0030,81,F,African American,Medicare
+P0031,20,M,African American,Private
+P0032,68,F,Hispanic,Private
+P0033,24,F,African American,Private
+P0034,38,F,Caucasian,Medicare
+P0035,56,M,African American,Medicare
+P0036,35,F,Hispanic,Medicare
+P0037,21,M,African American,Medicare
+P0038,77,F,Caucasian,Medicare
+P0039,31,M,Caucasian,Private
+P0040,26,M,Caucasian,Medicare
+P0041,70,F,Hispanic,Medicare
+P0042,19,F,Hispanic,Private
+P0043,77,M,Asian,Medicare
+P0044,88,F,Hispanic,Private
+P0045,61,M,Caucasian,Private
+P0046,25,M,Caucasian,Medicaid
+P0047,64,M,Hispanic,Medicaid
+P0048,52,M,African American,Medicaid
+P0049,53,M,Hispanic,Medicaid
+P0050,67,F,Hispanic,Medicare
+P0051,21,M,Caucasian,Medicaid
+P0052,19,M,Asian,Private
+P0053,23,F,Caucasian,Medicare
+P0054,71,M,Asian,Medicaid
+P0055,21,F,Caucasian,Private
+P0056,71,F,Hispanic,Medicare
+P0057,80,F,Caucasian,Medicare
+P0058,35,M,Caucasian,Medicaid
+P0059,61,M,Caucasian,Medicare
+P0060,51,M,Hispanic,Private
+P0061,79,F,Hispanic,Medicare
+P0062,31,M,Hispanic,Private
+P0063,65,F,Hispanic,Medicare
+P0064,32,M,Asian,Medicaid
+P0065,89,F,Asian,Private
+P0066,79,M,African American,Medicare
+P0067,57,M,Hispanic,Medicare
+P0068,70,M,Asian,Medicare
+P0069,41,F,Caucasian,Private
+P0070,43,F,Hispanic,Private
+P0071,77,M,African American,Private
+P0072,58,M,African American,Medicaid
+P0073,46,F,African American,Medicaid
+P0074,32,F,Caucasian,Private
+P0075,62,F,Asian,Medicare
+P0076,82,M,Caucasian,Medicaid
+P0077,88,F,Hispanic,Private
+P0078,26,M,African American,Medicare
+P0079,18,F,Caucasian,Medicaid
+P0080,25,M,Caucasian,Medicare
+P0081,80,F,Asian,Medicare
+P0082,28,F,Asian,Medicare
+P0083,25,F,African American,Medicare
+P0084,52,F,Caucasian,Medicaid
+P0085,52,F,Caucasian,Medicaid
+P0086,50,M,Asian,Medicaid
+P0087,22,F,Caucasian,Private
+P0088,58,F,Caucasian,Medicaid
+P0089,45,F,Caucasian,Medicare
+P0090,24,M,Asian,Medicaid
+P0091,89,F,African American,Medicare
+P0092,29,M,Hispanic,Private
+P0093,51,F,African American,Medicare
+P0094,50,F,Hispanic,Medicare
+P0095,65,M,Caucasian,Medicare
+P0096,40,F,African American,Private
+P0097,79,M,Hispanic,Medicaid
+P0098,54,M,Asian,Medicaid
+P0099,61,F,Asian,Private
+P0100,52,M,African American,Medicare
+P0101,82,F,African American,Medicaid
+P0102,64,F,Caucasian,Private
+P0103,20,M,African American,Medicaid
+P0104,18,M,Caucasian,Private
+P0105,22,M,Caucasian,Medicare
+P0106,31,M,Asian,Medicaid
+P0107,44,F,Asian,Private
+P0108,26,F,Hispanic,Medicaid
+P0109,32,M,Asian,Medicaid
+P0110,59,F,Asian,Medicaid
+P0111,68,F,African American,Medicaid
+P0112,80,F,Asian,Private
+P0113,69,F,Hispanic,Medicare
+P0114,21,M,African American,Private
+P0115,40,M,Hispanic,Private
+P0116,32,F,Asian,Private
+P0117,60,M,Hispanic,Medicare
+P0118,46,M,African American,Medicaid
+P0119,53,M,Caucasian,Medicaid
+P0120,30,F,Hispanic,Medicaid
+P0121,49,F,Hispanic,Medicare
+P0122,88,F,African American,Medicaid
+P0123,76,M,African American,Medicare
+P0124,45,F,Hispanic,Medicaid
+P0125,83,F,Asian,Medicaid
+P0126,59,M,Hispanic,Private
+P0127,62,F,African American,Medicare
+P0128,79,F,Caucasian,Private
+P0129,74,M,Caucasian,Private
+P0130,23,M,Asian,Private
+P0131,45,M,Hispanic,Medicare
+P0132,45,F,Caucasian,Medicare
+P0133,61,F,Hispanic,Medicaid
+P0134,47,F,African American,Private
+P0135,79,M,Caucasian,Medicaid
+P0136,79,M,Asian,Private
+P0137,18,F,African American,Medicare
+P0138,44,F,Asian,Medicare
+P0139,79,M,African American,Medicare
+P0140,20,M,Caucasian,Private
+P0141,87,M,Asian,Medicare
+P0142,89,M,Asian,Private
+P0143,44,F,African American,Medicaid
+P0144,26,M,Asian,Private
+P0145,79,F,African American,Medicaid
+P0146,54,F,African American,Private
+P0147,68,F,African American,Medicaid
+P0148,61,M,African American,Medicare
+P0149,41,M,Caucasian,Medicaid
+P0150,76,M,African American,Medicare
+P0151,49,M,Hispanic,Medicare
+P0152,69,F,Asian,Medicaid
+P0153,79,M,Hispanic,Private
+P0154,75,M,Caucasian,Private
+P0155,69,F,Hispanic,Private
+P0156,29,M,Asian,Private
+P0157,56,F,Hispanic,Private
+P0158,19,F,Caucasian,Medicare
+P0159,20,F,African American,Private
+P0160,73,F,Hispanic,Medicare
+P0161,76,F,Caucasian,Medicare
+P0162,19,F,Caucasian,Medicare
+P0163,19,F,Asian,Medicaid
+P0164,71,F,Asian,Medicaid
+P0165,18,M,Hispanic,Medicare
+P0166,36,M,African American,Medicaid
+P0167,19,M,Caucasian,Private
+P0168,70,M,Hispanic,Private
+P0169,61,F,Caucasian,Medicare
+P0170,49,M,Caucasian,Private
+P0171,87,F,African American,Medicare
+P0172,49,M,African American,Medicare
+P0173,85,M,Hispanic,Private
+P0174,72,M,African American,Medicaid
+P0175,73,F,African American,Private
+P0176,34,M,Hispanic,Private
+P0177,55,F,African American,Medicare
+P0178,41,F,Asian,Medicare
+P0179,86,M,Caucasian,Medicare
+P0180,87,M,Caucasian,Medicare
+P0181,28,M,Caucasian,Medicaid
+P0182,33,F,Caucasian,Medicaid
+P0183,76,M,Hispanic,Medicaid
+P0184,87,F,Caucasian,Medicare
+P0185,20,F,Caucasian,Medicare
+P0186,37,M,Caucasian,Medicare
+P0187,76,M,Caucasian,Medicaid
+P0188,53,F,Asian,Medicare
+P0189,36,F,Caucasian,Private
+P0190,84,F,Asian,Private
+P0191,36,M,Hispanic,Medicare
+P0192,37,F,African American,Private
+P0193,88,M,Caucasian,Private
+P0194,69,F,African American,Medicaid
+P0195,50,F,African American,Medicare
+P0196,57,M,Hispanic,Medicare
+P0197,56,F,African American,Medicaid
+P0198,18,M,Asian,Private
+P0199,28,M,African American,Private
+P0200,74,F,African American,Medicare
+P0201,67,M,African American,Private
+P0202,40,M,Caucasian,Medicaid
+P0203,48,F,Caucasian,Medicaid
+P0204,59,M,Asian,Medicare
+P0205,24,M,Asian,Medicaid
+P0206,33,M,Caucasian,Medicaid
+P0207,77,F,Asian,Medicare
+P0208,19,M,Caucasian,Medicaid
+P0209,18,F,Hispanic,Medicaid
+P0210,65,F,African American,Medicaid
+P0211,29,M,African American,Private
+P0212,86,M,Asian,Medicare
+P0213,54,M,Caucasian,Medicare
+P0214,49,F,Caucasian,Medicare
+P0215,26,M,Asian,Private
+P0216,36,M,Caucasian,Private
+P0217,65,M,Hispanic,Medicare
+P0218,20,M,African American,Private
+P0219,37,M,Asian,Medicare
+P0220,41,F,Asian,Private
+P0221,71,F,Caucasian,Medicaid
+P0222,50,M,Asian,Medicaid
+P0223,41,M,Hispanic,Medicare
+P0224,89,M,Caucasian,Private
+P0225,53,M,Caucasian,Private
+P0226,55,F,Caucasian,Medicaid
+P0227,42,M,Caucasian,Medicaid
+P0228,35,F,Hispanic,Private
+P0229,83,F,Caucasian,Private
+P0230,71,M,Asian,Private
+P0231,52,F,Hispanic,Private
+P0232,78,F,African American,Private
+P0233,58,F,African American,Private
+P0234,50,F,Asian,Medicare
+P0235,85,M,Asian,Private
+P0236,50,M,Hispanic,Medicaid
+P0237,31,F,African American,Medicare
+P0238,38,M,African American,Private
+P0239,65,M,African American,Medicaid
+P0240,37,M,African American,Medicare
+P0241,25,M,African American,Medicaid
+P0242,24,M,Caucasian,Private
+P0243,84,F,Asian,Private
+P0244,34,M,Caucasian,Private
+P0245,50,M,African American,Private
+P0246,65,M,Hispanic,Medicare
+P0247,76,M,Hispanic,Medicare
+P0248,39,F,African American,Medicaid
+P0249,47,F,African American,Private
+P0250,55,F,Hispanic,Medicaid
+P0251,68,F,Caucasian,Medicare
+P0252,71,M,Caucasian,Private
+P0253,25,F,African American,Private
+P0254,44,M,Caucasian,Medicare
+P0255,44,M,Hispanic,Medicare
+P0256,38,M,Caucasian,Medicare
+P0257,47,M,African American,Medicare
+P0258,45,M,Hispanic,Medicare
+P0259,81,F,Caucasian,Private
+P0260,86,F,Asian,Medicare
+P0261,78,F,Hispanic,Private
+P0262,65,F,Hispanic,Private
+P0263,36,M,Asian,Medicare
+P0264,21,F,Asian,Medicare
+P0265,52,M,Hispanic,Private
+P0266,81,F,Asian,Medicare
+P0267,66,M,African American,Medicare
+P0268,34,M,African American,Medicare
+P0269,61,F,African American,Medicaid
+P0270,47,M,Hispanic,Private
+P0271,63,M,Asian,Medicaid
+P0272,23,F,Asian,Medicare
+P0273,54,M,Caucasian,Medicaid
+P0274,41,F,Caucasian,Medicare
+P0275,63,F,Asian,Medicaid
+P0276,70,F,Asian,Medicare
+P0277,77,M,Asian,Medicaid
+P0278,80,M,Hispanic,Medicaid
+P0279,49,M,Asian,Medicaid
+P0280,50,F,Caucasian,Private
+P0281,84,M,Hispanic,Medicaid
+P0282,35,F,Asian,Private
+P0283,42,F,Caucasian,Medicare
+P0284,71,M,Hispanic,Medicaid
+P0285,75,F,Asian,Medicare
+P0286,84,M,Asian,Medicare
+P0287,63,M,Asian,Medicaid
+P0288,41,M,Hispanic,Private
+P0289,49,M,Caucasian,Medicaid
+P0290,64,M,Caucasian,Medicare
+P0291,40,F,African American,Medicare
+P0292,83,F,Asian,Medicaid
+P0293,44,F,African American,Private
+P0294,19,M,African American,Private
+P0295,34,M,Caucasian,Medicare
+P0296,50,M,Hispanic,Medicare
+P0297,26,F,Hispanic,Private
+P0298,60,M,Caucasian,Medicaid
+P0299,65,F,Hispanic,Medicare
+P0300,56,F,African American,Private
+P0301,59,M,Asian,Medicare
+P0302,43,M,Caucasian,Medicaid
+P0303,67,F,Asian,Private
+P0304,42,M,Hispanic,Medicare
+P0305,41,F,Asian,Medicaid
+P0306,30,M,Hispanic,Medicare
+P0307,77,M,Hispanic,Medicaid
+P0308,24,F,African American,Medicaid
+P0309,74,M,Hispanic,Private
+P0310,53,F,African American,Medicaid
+P0311,62,M,African American,Medicare
+P0312,37,F,African American,Medicaid
+P0313,82,F,Caucasian,Medicaid
+P0314,25,M,Caucasian,Private
+P0315,33,F,Hispanic,Medicaid
+P0316,31,M,African American,Medicaid
+P0317,32,M,Caucasian,Medicare
+P0318,83,M,African American,Private
+P0319,49,F,Asian,Private
+P0320,80,F,Asian,Private
+P0321,68,M,Asian,Medicaid
+P0322,42,M,Hispanic,Private
+P0323,75,F,African American,Medicaid
+P0324,80,M,Asian,Medicaid
+P0325,79,M,Caucasian,Medicare
+P0326,39,F,Asian,Medicare
+P0327,75,M,Asian,Medicare
+P0328,75,F,Asian,Medicare
+P0329,66,M,Hispanic,Medicare
+P0330,69,F,Caucasian,Medicaid
+P0331,59,M,African American,Medicaid
+P0332,87,M,Caucasian,Private
+P0333,32,F,African American,Medicaid
+P0334,71,M,Hispanic,Medicaid
+P0335,77,F,Hispanic,Medicare
+P0336,25,M,Hispanic,Medicaid
+P0337,70,F,Hispanic,Medicare
+P0338,77,F,African American,Private
+P0339,22,F,Asian,Private
+P0340,85,F,African American,Medicaid
+P0341,23,M,Caucasian,Private
+P0342,64,M,Hispanic,Medicaid
+P0343,72,F,Hispanic,Private
+P0344,57,F,Caucasian,Medicare
+P0345,69,F,African American,Medicare
+P0346,33,M,Asian,Medicare
+P0347,30,M,Asian,Medicare
+P0348,47,M,Caucasian,Medicaid
+P0349,36,M,Asian,Private
+P0350,34,F,African American,Medicaid
+P0351,80,F,African American,Medicare
+P0352,36,F,Caucasian,Medicaid
+P0353,75,M,African American,Private
+P0354,72,M,Hispanic,Medicaid
+P0355,79,M,Caucasian,Private
+P0356,40,F,African American,Medicaid
+P0357,26,F,Caucasian,Private
+P0358,29,M,Asian,Private
+P0359,18,F,African American,Medicare
+P0360,75,M,Hispanic,Private
+P0361,18,M,African American,Medicare
+P0362,51,F,Caucasian,Medicare
+P0363,65,M,Caucasian,Medicare
+P0364,18,F,African American,Medicaid
+P0365,33,M,Hispanic,Medicaid
+P0366,78,F,Hispanic,Medicaid
+P0367,81,F,Hispanic,Medicaid
+P0368,80,F,Caucasian,Private
+P0369,86,M,African American,Private
+P0370,39,M,Asian,Medicaid
+P0371,84,F,Caucasian,Private
+P0372,43,F,Hispanic,Private
+P0373,33,M,African American,Medicare
+P0374,68,M,Hispanic,Medicare
+P0375,74,M,Asian,Medicare
+P0376,46,F,Hispanic,Medicare
+P0377,86,M,Hispanic,Private
+P0378,64,M,Asian,Medicaid
+P0379,79,F,African American,Private
+P0380,86,M,Caucasian,Private
+P0381,33,M,African American,Private
+P0382,65,M,Asian,Medicare
+P0383,56,F,Hispanic,Medicare
+P0384,50,F,African American,Medicare
+P0385,40,F,Caucasian,Medicaid
+P0386,27,F,Asian,Private
+P0387,86,F,African American,Medicaid
+P0388,51,F,Caucasian,Medicare
+P0389,69,F,Asian,Medicaid
+P0390,27,M,Caucasian,Private
+P0391,36,M,Asian,Private
+P0392,75,F,Hispanic,Medicare
+P0393,18,M,African American,Medicare
+P0394,86,M,Caucasian,Medicaid
+P0395,21,F,Asian,Medicare
+P0396,33,M,Caucasian,Medicare
+P0397,41,M,Caucasian,Private
+P0398,19,M,African American,Medicare
+P0399,49,M,Hispanic,Medicare
+P0400,41,M,Caucasian,Private
+P0401,29,F,Asian,Private
+P0402,67,F,Asian,Medicaid
+P0403,52,F,Hispanic,Medicare
+P0404,50,M,Asian,Private
+P0405,50,F,Hispanic,Medicaid
+P0406,78,M,Asian,Medicaid
+P0407,68,M,African American,Medicare
+P0408,60,M,Caucasian,Medicare
+P0409,29,M,African American,Medicaid
+P0410,84,F,Caucasian,Private
+P0411,82,F,Caucasian,Medicaid
+P0412,50,M,Caucasian,Medicare
+P0413,57,F,African American,Private
+P0414,60,M,Caucasian,Private
+P0415,61,F,African American,Medicaid
+P0416,46,F,Hispanic,Medicare
+P0417,30,M,Asian,Medicaid
+P0418,29,F,Asian,Medicaid
+P0419,63,M,Caucasian,Medicaid
+P0420,19,F,African American,Private
+P0421,52,M,Asian,Private
+P0422,25,M,African American,Medicare
+P0423,43,F,African American,Medicare
+P0424,51,F,Caucasian,Medicaid
+P0425,24,M,Asian,Medicaid
+P0426,85,F,Caucasian,Medicaid
+P0427,75,F,Caucasian,Medicare
+P0428,46,M,Asian,Private
+P0429,53,M,Asian,Private
+P0430,38,F,Hispanic,Medicaid
+P0431,53,M,Hispanic,Medicaid
+P0432,27,M,African American,Medicaid
+P0433,41,M,Asian,Medicaid
+P0434,81,F,Hispanic,Medicare
+P0435,66,F,African American,Private
+P0436,53,M,African American,Medicaid
+P0437,41,F,African American,Medicare
+P0438,40,M,Hispanic,Medicaid
+P0439,79,F,Asian,Medicaid
+P0440,54,M,Caucasian,Private
+P0441,29,M,African American,Medicaid
+P0442,72,F,Hispanic,Private
+P0443,30,M,Hispanic,Private
+P0444,40,F,Caucasian,Private
+P0445,47,F,Caucasian,Medicare
+P0446,34,M,Hispanic,Medicare
+P0447,79,M,Asian,Private
+P0448,30,F,Caucasian,Medicaid
+P0449,76,M,Hispanic,Private
+P0450,36,M,Caucasian,Medicaid
+P0451,66,M,Asian,Private
+P0452,29,M,African American,Medicaid
+P0453,78,M,Caucasian,Medicare
+P0454,36,F,Asian,Medicaid
+P0455,26,F,Hispanic,Private
+P0456,88,M,Caucasian,Medicare
+P0457,45,M,Caucasian,Medicaid
+P0458,69,M,Hispanic,Medicaid
+P0459,33,F,African American,Medicaid
+P0460,86,M,Hispanic,Medicaid
+P0461,29,F,Caucasian,Medicaid
+P0462,42,F,Hispanic,Medicare
+P0463,69,F,Asian,Medicare
+P0464,70,M,Hispanic,Medicare
+P0465,40,F,Caucasian,Medicare
+P0466,33,M,Hispanic,Private
+P0467,74,F,African American,Medicare
+P0468,56,M,Hispanic,Medicaid
+P0469,70,F,African American,Medicaid
+P0470,59,M,Asian,Medicare
+P0471,75,F,African American,Medicaid
+P0472,56,M,Hispanic,Medicare
+P0473,31,M,Caucasian,Medicaid
+P0474,22,M,African American,Private
+P0475,52,M,Asian,Private
+P0476,35,F,African American,Medicare
+P0477,26,F,African American,Medicare
+P0478,75,M,African American,Medicare
+P0479,34,F,Asian,Medicaid
+P0480,24,M,Hispanic,Medicare
+P0481,63,M,African American,Private
+P0482,30,F,African American,Medicaid
+P0483,57,M,Caucasian,Medicare
+P0484,59,M,Asian,Medicaid
+P0485,26,F,African American,Medicaid
+P0486,67,M,Asian,Medicare
+P0487,44,M,African American,Medicaid
+P0488,83,M,Hispanic,Private
+P0489,22,M,Hispanic,Private
+P0490,46,F,African American,Medicaid
+P0491,54,F,Hispanic,Medicare
+P0492,55,F,African American,Medicaid
+P0493,25,M,Hispanic,Private
+P0494,82,M,Caucasian,Medicaid
+P0495,34,F,Caucasian,Medicaid
+P0496,88,M,Caucasian,Private
+P0497,62,M,Asian,Medicaid
+P0498,21,M,Asian,Medicaid
+P0499,53,M,Caucasian,Medicare
+P0500,87,F,Asian,Medicare
+P0501,48,F,Hispanic,Private
+P0502,36,F,African American,Private
+P0503,78,M,African American,Private
+P0504,71,F,African American,Medicare
+P0505,56,F,Caucasian,Private
+P0506,36,M,Asian,Private
+P0507,56,M,Hispanic,Private
+P0508,84,F,Hispanic,Medicare
+P0509,62,F,Caucasian,Medicaid
+P0510,30,F,Hispanic,Private
+P0511,75,F,Hispanic,Medicaid
+P0512,37,M,Hispanic,Private
+P0513,89,F,Hispanic,Medicaid
+P0514,78,F,Asian,Medicare
+P0515,56,M,Hispanic,Medicare
+P0516,18,F,African American,Private
+P0517,20,M,Caucasian,Medicaid
+P0518,79,M,Asian,Medicare
+P0519,80,M,Hispanic,Private
+P0520,42,F,Asian,Private
+P0521,73,F,Hispanic,Medicare
+P0522,50,M,African American,Medicare
+P0523,55,F,Caucasian,Private
+P0524,23,F,Hispanic,Medicaid
+P0525,75,M,Hispanic,Medicaid
+P0526,61,M,Hispanic,Medicaid
+P0527,62,F,Hispanic,Private
+P0528,49,M,Caucasian,Medicare
+P0529,62,F,Caucasian,Private
+P0530,78,F,African American,Medicare
+P0531,64,F,Caucasian,Medicaid
+P0532,38,F,Hispanic,Medicaid
+P0533,53,M,African American,Medicare
+P0534,36,M,African American,Medicare
+P0535,37,M,African American,Private
+P0536,74,M,Hispanic,Medicaid
+P0537,35,F,Asian,Private
+P0538,64,F,Hispanic,Private
+P0539,66,M,Caucasian,Private
+P0540,31,F,Caucasian,Medicaid
+P0541,32,F,Hispanic,Private
+P0542,48,F,Hispanic,Private
+P0543,18,M,African American,Private
+P0544,71,M,Hispanic,Private
+P0545,20,M,African American,Private
+P0546,33,F,Caucasian,Private
+P0547,74,M,African American,Medicaid
+P0548,29,M,Hispanic,Private
+P0549,33,M,Caucasian,Medicare
+P0550,89,M,Asian,Private
+P0551,41,M,African American,Private
+P0552,45,M,Caucasian,Medicaid
+P0553,25,F,African American,Medicaid
+P0554,53,F,Caucasian,Medicare
+P0555,25,M,Caucasian,Medicare
+P0556,75,M,African American,Medicaid
+P0557,77,F,Asian,Medicaid
+P0558,67,F,Caucasian,Private
+P0559,45,M,Caucasian,Medicaid
+P0560,58,M,Caucasian,Medicare
+P0561,81,M,Asian,Private
+P0562,44,M,Asian,Medicare
+P0563,80,F,Hispanic,Private
+P0564,34,M,African American,Medicaid
+P0565,50,M,Asian,Medicare
+P0566,46,M,African American,Private
+P0567,30,M,Hispanic,Private
+P0568,63,F,African American,Medicaid
+P0569,52,F,Asian,Medicaid
+P0570,23,F,African American,Medicaid
+P0571,86,M,Asian,Medicare
+P0572,64,M,African American,Private
+P0573,42,F,Asian,Medicaid
+P0574,83,M,Asian,Medicare
+P0575,27,M,African American,Medicare
+P0576,73,F,Hispanic,Medicare
+P0577,47,F,Caucasian,Medicaid
+P0578,22,F,Hispanic,Medicaid
+P0579,50,F,African American,Private
+P0580,82,M,Hispanic,Private
+P0581,35,M,Asian,Medicaid
+P0582,66,F,Caucasian,Medicare
+P0583,28,M,African American,Medicare
+P0584,43,F,African American,Medicare
+P0585,80,F,African American,Private
+P0586,76,M,Caucasian,Medicare
+P0587,44,F,Asian,Private
+P0588,66,M,African American,Private
+P0589,50,M,Hispanic,Medicare
+P0590,18,M,African American,Medicare
+P0591,38,M,African American,Medicaid
+P0592,72,F,African American,Medicaid
+P0593,23,M,African American,Medicare
+P0594,86,F,Asian,Private
+P0595,22,F,Hispanic,Private
+P0596,20,F,Asian,Private
+P0597,70,F,Hispanic,Private
+P0598,40,M,African American,Private
+P0599,70,M,Caucasian,Medicaid
+P0600,54,F,Asian,Medicare
+P0601,34,F,Caucasian,Medicaid
+P0602,18,M,Asian,Private
+P0603,68,F,African American,Private
+P0604,62,M,Asian,Private
+P0605,21,F,African American,Private
+P0606,79,M,Asian,Medicare
+P0607,82,F,African American,Private
+P0608,49,F,African American,Medicare
+P0609,51,M,Hispanic,Private
+P0610,89,F,African American,Medicare
+P0611,56,F,Hispanic,Medicaid
+P0612,43,M,African American,Private
+P0613,51,F,Caucasian,Medicare
+P0614,71,M,African American,Medicaid
+P0615,20,M,Caucasian,Private
+P0616,67,F,Caucasian,Private
+P0617,29,F,African American,Private
+P0618,82,F,Caucasian,Medicare
+P0619,71,F,Hispanic,Medicare
+P0620,22,F,Asian,Medicaid
+P0621,74,F,African American,Medicare
+P0622,34,F,Caucasian,Medicare
+P0623,64,M,African American,Private
+P0624,40,F,Hispanic,Private
+P0625,31,M,African American,Private
+P0626,83,F,African American,Private
+P0627,68,F,Caucasian,Private
+P0628,55,M,Hispanic,Private
+P0629,81,F,Asian,Private
+P0630,55,F,Asian,Medicaid
+P0631,67,M,Caucasian,Medicaid
+P0632,47,F,African American,Medicaid
+P0633,68,F,Caucasian,Medicaid
+P0634,80,F,Caucasian,Private
+P0635,69,M,Caucasian,Medicaid
+P0636,55,F,African American,Private
+P0637,47,F,Hispanic,Medicaid
+P0638,68,F,Caucasian,Medicare
+P0639,22,F,African American,Medicaid
+P0640,46,M,Hispanic,Medicaid
+P0641,21,M,Caucasian,Private
+P0642,27,F,Asian,Medicaid
+P0643,73,F,Hispanic,Medicare
+P0644,34,M,Caucasian,Private
+P0645,34,M,Hispanic,Private
+P0646,86,F,Hispanic,Medicaid
+P0647,51,M,Hispanic,Private
+P0648,23,F,Hispanic,Private
+P0649,70,M,Hispanic,Private
+P0650,83,M,Hispanic,Private
+P0651,60,M,Caucasian,Private
+P0652,40,M,Asian,Private
+P0653,72,F,African American,Medicare
+P0654,33,M,Hispanic,Medicaid
+P0655,25,M,African American,Medicare
+P0656,21,F,Caucasian,Private
+P0657,21,M,Hispanic,Private
+P0658,73,M,Asian,Medicaid
+P0659,42,F,African American,Medicare
+P0660,84,M,Hispanic,Medicaid
+P0661,84,F,Caucasian,Medicare
+P0662,44,F,Asian,Private
+P0663,49,F,African American,Medicaid
+P0664,67,F,African American,Medicaid
+P0665,78,M,Hispanic,Private
+P0666,68,F,Asian,Medicaid
+P0667,36,M,Asian,Medicare
+P0668,38,M,Asian,Medicare
+P0669,22,M,Asian,Medicare
+P0670,59,M,Caucasian,Medicare
+P0671,78,M,Asian,Private
+P0672,39,M,African American,Medicaid
+P0673,38,M,African American,Medicare
+P0674,87,M,Caucasian,Private
+P0675,18,M,African American,Medicaid
+P0676,22,M,African American,Medicaid
+P0677,29,F,Asian,Private
+P0678,63,F,African American,Private
+P0679,51,F,Caucasian,Medicare
+P0680,66,M,Asian,Medicaid
+P0681,62,F,Hispanic,Medicaid
+P0682,44,F,Asian,Private
+P0683,43,F,Caucasian,Medicaid
+P0684,64,M,Asian,Medicare
+P0685,73,M,Asian,Medicaid
+P0686,80,M,Caucasian,Private
+P0687,65,M,Asian,Private
+P0688,78,F,Caucasian,Medicare
+P0689,43,F,Caucasian,Medicare
+P0690,53,F,Hispanic,Medicaid
+P0691,18,F,African American,Medicaid
+P0692,25,M,African American,Private
+P0693,69,M,Asian,Medicare
+P0694,64,M,Asian,Medicare
+P0695,73,F,Hispanic,Medicare
+P0696,31,M,Hispanic,Medicaid
+P0697,45,M,Hispanic,Medicare
+P0698,19,F,Caucasian,Private
+P0699,43,F,Hispanic,Private
+P0700,31,M,Hispanic,Medicaid
+P0701,76,M,Asian,Medicaid
+P0702,73,M,Hispanic,Medicare
+P0703,24,M,Caucasian,Medicaid
+P0704,20,M,Caucasian,Private
+P0705,40,M,Asian,Medicare
+P0706,35,F,Hispanic,Private
+P0707,55,F,Hispanic,Medicare
+P0708,32,F,Caucasian,Medicaid
+P0709,81,M,Hispanic,Medicare
+P0710,45,F,Hispanic,Medicare
+P0711,56,M,Hispanic,Private
+P0712,74,M,African American,Private
+P0713,34,F,Asian,Medicare
+P0714,61,M,African American,Medicaid
+P0715,42,M,Asian,Medicaid
+P0716,34,F,Caucasian,Private
+P0717,30,F,Hispanic,Medicaid
+P0718,42,F,Asian,Private
+P0719,85,M,African American,Medicaid
+P0720,27,F,Hispanic,Medicare
+P0721,84,F,Caucasian,Private
+P0722,35,M,Asian,Private
+P0723,51,F,Asian,Medicare
+P0724,25,F,Asian,Private
+P0725,57,F,Hispanic,Medicaid
+P0726,59,M,African American,Medicaid
+P0727,58,M,African American,Private
+P0728,23,M,Asian,Medicaid
+P0729,69,M,Caucasian,Private
+P0730,43,F,Caucasian,Medicare
+P0731,81,M,African American,Private
+P0732,76,M,Caucasian,Medicare
+P0733,73,F,African American,Medicaid
+P0734,76,F,Asian,Medicare
+P0735,87,F,African American,Medicaid
+P0736,50,M,African American,Private
+P0737,70,M,Asian,Medicaid
+P0738,39,M,Caucasian,Private
+P0739,38,F,African American,Private
+P0740,87,F,African American,Medicare
+P0741,87,M,Asian,Medicare
+P0742,21,F,Caucasian,Medicare
+P0743,79,F,African American,Medicare
+P0744,79,F,Asian,Medicaid
+P0745,41,M,African American,Medicaid
+P0746,72,F,Hispanic,Medicaid
+P0747,26,F,Asian,Private
+P0748,20,M,Caucasian,Medicaid
+P0749,48,M,Caucasian,Medicaid
+P0750,57,F,Caucasian,Medicaid
+P0751,53,F,Caucasian,Medicare
+P0752,41,M,African American,Medicaid
+P0753,23,M,African American,Private
+P0754,83,F,Caucasian,Medicare
+P0755,21,F,Caucasian,Private
+P0756,23,F,Caucasian,Medicaid
+P0757,68,F,African American,Medicare
+P0758,79,M,Caucasian,Private
+P0759,74,F,Caucasian,Medicaid
+P0760,83,F,Hispanic,Private
+P0761,25,M,Hispanic,Private
+P0762,43,F,Caucasian,Private
+P0763,68,M,Asian,Medicaid
+P0764,62,F,Caucasian,Medicaid
+P0765,61,F,Hispanic,Private
+P0766,22,M,Asian,Medicare
+P0767,87,M,Asian,Medicare
+P0768,43,F,Caucasian,Medicaid
+P0769,85,F,Hispanic,Medicaid
+P0770,36,F,Hispanic,Medicaid
+P0771,37,M,Asian,Medicaid
+P0772,29,F,Caucasian,Medicaid
+P0773,64,M,African American,Medicare
+P0774,18,M,African American,Medicaid
+P0775,31,F,Hispanic,Private
+P0776,81,M,African American,Private
+P0777,55,F,Hispanic,Medicare
+P0778,54,F,Hispanic,Private
+P0779,28,F,Hispanic,Medicare
+P0780,20,F,African American,Medicare
+P0781,50,F,Hispanic,Private
+P0782,23,M,Asian,Medicaid
+P0783,67,M,Caucasian,Private
+P0784,27,F,Caucasian,Private
+P0785,22,F,Hispanic,Medicare
+P0786,40,M,Caucasian,Private
+P0787,27,M,African American,Medicare
+P0788,61,M,African American,Medicaid
+P0789,19,M,Caucasian,Medicaid
+P0790,30,F,African American,Medicaid
+P0791,57,F,Caucasian,Private
+P0792,19,M,Caucasian,Medicare
+P0793,82,F,Caucasian,Medicaid
+P0794,80,M,Hispanic,Medicare
+P0795,34,F,Caucasian,Medicare
+P0796,26,M,Hispanic,Medicaid
+P0797,32,F,Caucasian,Medicaid
+P0798,41,M,Caucasian,Medicare
+P0799,55,M,Caucasian,Medicaid
+P0800,52,F,African American,Medicare
+P0801,66,M,Hispanic,Medicare
+P0802,86,F,Hispanic,Medicaid
+P0803,79,F,Caucasian,Private
+P0804,77,M,Caucasian,Medicaid
+P0805,67,F,African American,Private
+P0806,26,F,African American,Medicare
+P0807,51,F,African American,Medicare
+P0808,52,F,Hispanic,Private
+P0809,18,F,Hispanic,Medicare
+P0810,57,M,Hispanic,Private
+P0811,81,F,Caucasian,Private
+P0812,39,F,Hispanic,Medicare
+P0813,77,F,Asian,Private
+P0814,81,F,Asian,Medicaid
+P0815,89,F,African American,Medicaid
+P0816,28,M,Hispanic,Medicare
+P0817,31,F,Asian,Medicare
+P0818,77,M,African American,Private
+P0819,47,M,Hispanic,Private
+P0820,52,M,Caucasian,Private
+P0821,54,M,Asian,Private
+P0822,22,F,Caucasian,Medicaid
+P0823,43,M,Hispanic,Medicaid
+P0824,79,M,Asian,Medicare
+P0825,21,F,Hispanic,Private
+P0826,59,F,Caucasian,Private
+P0827,35,F,Asian,Medicare
+P0828,57,M,Caucasian,Private
+P0829,89,F,Hispanic,Private
+P0830,56,F,Hispanic,Private
+P0831,31,M,Caucasian,Private
+P0832,49,F,Asian,Private
+P0833,68,F,Caucasian,Medicare
+P0834,55,F,Hispanic,Private
+P0835,40,F,Caucasian,Medicare
+P0836,80,M,Hispanic,Private
+P0837,32,F,Caucasian,Medicaid
+P0838,42,F,Asian,Medicaid
+P0839,34,M,Asian,Medicaid
+P0840,83,F,Caucasian,Medicaid
+P0841,70,M,Caucasian,Medicare
+P0842,68,F,Asian,Medicare
+P0843,56,M,Hispanic,Private
+P0844,68,M,Asian,Medicaid
+P0845,87,M,Hispanic,Medicare
+P0846,23,M,Caucasian,Private
+P0847,84,F,Caucasian,Private
+P0848,24,M,Hispanic,Medicare
+P0849,68,F,Caucasian,Medicaid
+P0850,89,M,Hispanic,Private
+P0851,59,M,African American,Medicaid
+P0852,81,M,Asian,Medicaid
+P0853,32,F,African American,Medicaid
+P0854,46,M,Hispanic,Private
+P0855,50,F,Asian,Medicaid
+P0856,44,F,Hispanic,Private
+P0857,53,F,Asian,Medicaid
+P0858,46,F,Asian,Private
+P0859,55,F,Asian,Medicaid
+P0860,74,F,Asian,Medicare
+P0861,44,F,Hispanic,Medicaid
+P0862,72,F,Asian,Medicaid
+P0863,50,F,Asian,Private
+P0864,85,M,African American,Private
+P0865,83,M,Caucasian,Medicaid
+P0866,27,M,Caucasian,Medicare
+P0867,22,M,African American,Medicare
+P0868,55,M,African American,Private
+P0869,30,F,Hispanic,Medicare
+P0870,48,F,Hispanic,Medicaid
+P0871,64,F,Hispanic,Private
+P0872,69,F,African American,Medicaid
+P0873,73,F,African American,Private
+P0874,32,F,Asian,Private
+P0875,46,F,Hispanic,Private
+P0876,25,M,Hispanic,Private
+P0877,22,M,Hispanic,Medicare
+P0878,46,M,Caucasian,Medicaid
+P0879,64,M,Asian,Medicaid
+P0880,85,F,Hispanic,Medicaid
+P0881,62,F,Hispanic,Private
+P0882,19,F,Hispanic,Medicare
+P0883,44,M,Caucasian,Medicaid
+P0884,53,F,Caucasian,Medicare
+P0885,53,F,African American,Private
+P0886,43,F,Asian,Medicaid
+P0887,60,M,African American,Medicare
+P0888,44,F,Asian,Private
+P0889,86,M,Caucasian,Medicare
+P0890,37,M,Hispanic,Medicaid
+P0891,28,M,African American,Medicaid
+P0892,55,M,Hispanic,Private
+P0893,23,F,African American,Private
+P0894,89,M,Caucasian,Private
+P0895,40,M,Caucasian,Medicare
+P0896,64,F,Caucasian,Medicare
+P0897,63,F,African American,Medicare
+P0898,29,M,Asian,Private
+P0899,30,F,African American,Medicaid
+P0900,79,M,Asian,Medicaid
+P0901,77,M,African American,Medicare
+P0902,60,M,African American,Medicare
+P0903,85,M,Caucasian,Medicaid
+P0904,22,F,Hispanic,Medicaid
+P0905,54,M,Hispanic,Medicare
+P0906,89,F,Asian,Medicare
+P0907,48,F,Hispanic,Medicaid
+P0908,26,F,African American,Private
+P0909,68,F,African American,Medicare
+P0910,46,M,Caucasian,Medicaid
+P0911,57,F,Caucasian,Medicaid
+P0912,58,M,Hispanic,Medicaid
+P0913,28,F,Asian,Medicaid
+P0914,40,F,Hispanic,Private
+P0915,18,M,Hispanic,Medicaid
+P0916,63,M,Hispanic,Medicare
+P0917,38,M,Hispanic,Private
+P0918,53,F,African American,Medicaid
+P0919,71,F,Asian,Private
+P0920,74,M,African American,Medicare
+P0921,18,M,Asian,Medicaid
+P0922,80,M,Caucasian,Medicare
+P0923,71,M,Hispanic,Medicaid
+P0924,72,F,African American,Medicaid
+P0925,57,M,Asian,Medicaid
+P0926,32,M,Caucasian,Medicaid
+P0927,38,M,Caucasian,Medicaid
+P0928,64,M,Hispanic,Private
+P0929,70,F,Asian,Medicaid
+P0930,26,M,African American,Medicaid
+P0931,69,F,Hispanic,Private
+P0932,74,M,African American,Private
+P0933,43,M,Caucasian,Private
+P0934,58,F,African American,Private
+P0935,52,M,African American,Private
+P0936,80,F,Hispanic,Private
+P0937,42,F,African American,Medicaid
+P0938,55,M,Hispanic,Medicaid
+P0939,19,F,Caucasian,Medicare
+P0940,24,F,Hispanic,Medicaid
+P0941,51,F,Hispanic,Medicaid
+P0942,34,F,Asian,Private
+P0943,60,F,African American,Private
+P0944,76,F,Caucasian,Medicaid
+P0945,68,F,Hispanic,Medicare
+P0946,71,F,Caucasian,Private
+P0947,41,M,Asian,Medicaid
+P0948,42,M,African American,Medicaid
+P0949,88,F,Hispanic,Medicare
+P0950,69,M,African American,Medicare
+P0951,87,F,Asian,Private
+P0952,50,F,Asian,Medicare
+P0953,66,M,Caucasian,Medicaid
+P0954,46,F,Hispanic,Medicaid
+P0955,80,F,Caucasian,Medicare
+P0956,39,F,Asian,Medicare
+P0957,43,F,African American,Medicare
+P0958,45,M,Caucasian,Medicare
+P0959,66,F,Caucasian,Private
+P0960,88,F,African American,Medicare
+P0961,66,F,Caucasian,Private
+P0962,37,M,African American,Medicaid
+P0963,80,F,Hispanic,Medicare
+P0964,78,M,African American,Private
+P0965,66,M,Hispanic,Medicare
+P0966,88,F,African American,Medicaid
+P0967,18,F,Asian,Medicaid
+P0968,30,M,Asian,Medicaid
+P0969,68,F,Hispanic,Medicare
+P0970,73,M,Hispanic,Medicare
+P0971,79,M,Asian,Private
+P0972,49,F,Hispanic,Medicaid
+P0973,47,F,African American,Medicare
+P0974,46,M,African American,Medicaid
+P0975,66,M,Asian,Medicaid
+P0976,62,M,Caucasian,Private
+P0977,47,M,African American,Private
+P0978,33,F,Hispanic,Private
+P0979,57,F,Caucasian,Private
+P0980,36,F,Caucasian,Medicaid
+P0981,35,F,African American,Private
+P0982,18,F,African American,Private
+P0983,64,M,Caucasian,Private
+P0984,83,F,Caucasian,Private
+P0985,55,F,Asian,Medicaid
+P0986,68,F,Hispanic,Private
+P0987,80,F,Asian,Medicaid
+P0988,21,F,African American,Medicare
+P0989,18,M,Asian,Medicaid
+P0990,25,M,Asian,Medicaid
+P0991,46,M,Asian,Private
+P0992,72,F,Asian,Medicare
+P0993,20,M,Hispanic,Medicare
+P0994,49,M,Hispanic,Medicare
+P0995,27,F,Caucasian,Medicare
+P0996,51,F,African American,Medicaid
+P0997,72,F,Asian,Medicare
+P0998,49,M,Caucasian,Medicaid
+P0999,67,M,Caucasian,Medicaid
