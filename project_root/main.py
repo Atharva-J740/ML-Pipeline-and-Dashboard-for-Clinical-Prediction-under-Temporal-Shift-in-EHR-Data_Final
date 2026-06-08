@@ -5,7 +5,13 @@ import sys
 import os
 
 # Add project root to path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, project_root)
+
+# Ensure necessary directories exist
+os.makedirs(os.path.join(project_root, 'data', 'processed'), exist_ok=True)
+os.makedirs(os.path.join(project_root, 'reports'), exist_ok=True)
+os.makedirs(os.path.join(project_root, 'models', 'saved_models'), exist_ok=True)
 
 from src.config import config
 from src.data_ingestion.ingestor import DataIngestor, FeatureEngineer
@@ -32,9 +38,13 @@ def run_pipeline():
     splitter = TemporalSplitter()
     d1, d2 = splitter.split(merged_df)
     
-    # Save processed datasets
-    d1.to_csv('project_root/data/processed/dataset1_historical.csv', index=False)
-    d2.to_csv('project_root/data/processed/dataset2_current.csv', index=False)
+    # Save processed datasets using relative paths
+    d1_path = os.path.join(project_root, 'data', 'processed', 'dataset1_historical.csv')
+    d2_path = os.path.join(project_root, 'data', 'processed', 'dataset2_current.csv')
+    d1.to_csv(d1_path, index=False)
+    d2.to_csv(d2_path, index=False)
+    print(f"Saved Dataset 1 to {d1_path}")
+    print(f"Saved Dataset 2 to {d2_path}")
     
     # 3. EDA & Drift Analysis
     print("Step 3: EDA & Drift Analysis...")
@@ -43,7 +53,9 @@ def run_pipeline():
     # Generate Box-plots for top numerical features
     analyzer.plot_feature_boxplots(d1, d2, config.NUMERICAL_FEATURES[:5])
     drift_df = analyzer.analyze_drift(d1, d2, config.NUMERICAL_FEATURES)
-    drift_df.to_csv('project_root/reports/drift_analysis.csv', index=False)
+    drift_path = os.path.join(project_root, 'reports', 'drift_analysis.csv')
+    drift_df.to_csv(drift_path, index=False)
+    print(f"Saved drift analysis to {drift_path}")
     
     # 4. Train/Test Split (Dataset 1)
     print("Step 4: Training Models on Dataset 1...")
@@ -84,7 +96,9 @@ def run_pipeline():
     m_cl = evaluator.evaluate(cl_model, X2_test, y2_test, 'MLP_FineTuned', 'D2_Test')
     results.append(m_cl)
     
-    pd.DataFrame(results).to_csv('project_root/reports/model_performance.csv', index=False)
+    perf_path = os.path.join(project_root, 'reports', 'model_performance.csv')
+    pd.DataFrame(results).to_csv(perf_path, index=False)
+    print(f"Saved model performance to {perf_path}")
     
     # 7. Interpretability
     print("Step 7: Generating Interpretability Reports...")
