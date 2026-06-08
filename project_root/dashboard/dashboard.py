@@ -66,7 +66,11 @@ if page == "Home":
     
     st.markdown("---")
     st.subheader("Target Distribution Comparison")
-    st.image(os.path.join(config.REPORTS_DIR, "target_distribution.png"), use_column_width=True)
+    target_img = os.path.join(config.REPORTS_DIR, "target_distribution.png")
+    if os.path.exists(target_img):
+        st.image(target_img, use_column_width=True)
+    else:
+        st.warning("Target distribution image not found")
     
     st.markdown("""
     ### Project Overview
@@ -79,8 +83,6 @@ if page == "Home":
 
 # ============== DATA EXPLORER ==============
 elif page == "Data Explorer":
-    import plotly.express as px
-    
     st.title("📊 Data Explorer")
     st.markdown("---")
     
@@ -91,20 +93,17 @@ elif page == "Data Explorer":
     st.write(f"Shape: {data.shape}")
     st.dataframe(data.head(10), use_container_width=True)
     
-    st.subheader("Feature Distributions")
-    feature = st.selectbox("Select Feature", config.NUMERICAL_FEATURES)
-    
-    fig = px.histogram(data, x=feature, nbins=30, title=f"Distribution of {feature}")
-    st.plotly_chart(fig, use_container_width=True)
+    st.subheader("Feature Statistics")
+    st.write(data[config.NUMERICAL_FEATURES].describe())
     
     st.subheader("Missing Values")
     missing = data.isnull().sum()
-    st.bar_chart(missing)
+    missing_pct = (missing / len(data)) * 100
+    missing_df = pd.DataFrame({'Missing Count': missing, 'Percentage': missing_pct}).sort_values('Percentage', ascending=False)
+    st.bar_chart(missing_df['Percentage'])
 
 # ============== EDA PAGE ==============
 elif page == "EDA":
-    import plotly.express as px
-    
     st.title("📈 Exploratory Data Analysis")
     st.markdown("---")
     
@@ -112,12 +111,12 @@ elif page == "EDA":
     col1, col2 = st.columns(2)
     with col1:
         target_d1 = d1['condition_binary'].value_counts()
-        fig1 = px.pie(values=target_d1.values, names=target_d1.index, title="Dataset 1 Target (0: Healthy, 1: Diabetes)")
-        st.plotly_chart(fig1, use_container_width=True)
+        st.metric("Dataset 1 - Healthy (0)", target_d1.get(0, 0))
+        st.metric("Dataset 1 - Diabetes (1)", target_d1.get(1, 0))
     with col2:
         target_d2 = d2['condition_binary'].value_counts()
-        fig2 = px.pie(values=target_d2.values, names=target_d2.index, title="Dataset 2 Target (0: Healthy, 1: Diabetes)")
-        st.plotly_chart(fig2, use_container_width=True)
+        st.metric("Dataset 2 - Healthy (0)", target_d2.get(0, 0))
+        st.metric("Dataset 2 - Diabetes (1)", target_d2.get(1, 0))
     
     st.markdown("---")
     st.subheader("Feature Distribution Analysis (Box-plots)")
@@ -126,22 +125,18 @@ elif page == "EDA":
     if os.path.exists(box_path):
         st.image(box_path, use_column_width=True)
     else:
-        st.info("Box-plot not found. Please run the pipeline.")
+        st.info(f"Box-plot for {feature_to_plot} not found")
 
     st.markdown("---")
     st.subheader("Drift Analysis")
     st.dataframe(drift, use_container_width=True)
     
-    st.subheader("Drift Visualization")
-    if len(drift) > 0:
-        fig = px.bar(drift, x='feature', y='ks_stat', color='drift_detected', 
-                     title="KS Statistic by Feature (Drift Detection)")
-        st.plotly_chart(fig, use_container_width=True)
+    # Display drift stats
+    drift_detected = drift['drift_detected'].sum()
+    st.metric("Features with Drift Detected", f"{drift_detected}/{len(drift)}")
 
 # ============== MODEL TRAINING PAGE ==============
 elif page == "Model Training":
-    import plotly.express as px
-    
     st.title("🤖 Model Training & Evaluation")
     st.markdown("---")
     
@@ -153,19 +148,15 @@ elif page == "Model Training":
     with col1:
         st.subheader("Accuracy Comparison")
         accuracy_data = perf.pivot_table(values='accuracy', index='model', columns='dataset')
-        fig = px.bar(accuracy_data, barmode='group', title="Accuracy by Model and Dataset")
-        st.plotly_chart(fig, use_container_width=True)
+        st.bar_chart(accuracy_data)
     
     with col2:
         st.subheader("F1-Score Comparison")
         f1_data = perf.pivot_table(values='f1', index='model', columns='dataset')
-        fig = px.bar(f1_data, barmode='group', title="F1-Score by Model and Dataset")
-        st.plotly_chart(fig, use_container_width=True)
+        st.bar_chart(f1_data)
 
 # ============== CROSS-TEMPORAL EVALUATION ==============
 elif page == "Cross-Temporal Evaluation":
-    import plotly.express as px
-    
     st.title("🔄 Cross-Temporal Evaluation")
     st.markdown("---")
     
@@ -199,14 +190,11 @@ elif page == "Cross-Temporal Evaluation":
         gap = d1_acc - d2_acc
         gap_data.append({'Model': model, 'Generalization Gap': gap})
     
-    gap_df = pd.DataFrame(gap_data)
-    fig = px.bar(gap_df, x='Model', y='Generalization Gap', title="Generalization Gap (D1 Acc - D2 Acc)")
-    st.plotly_chart(fig, use_container_width=True)
+    gap_df = pd.DataFrame(gap_data).set_index('Model')
+    st.bar_chart(gap_df)
 
 # ============== CONTINUAL LEARNING ==============
 elif page == "Continual Learning":
-    import plotly.express as px
-    
     st.title("🔄 Continual Learning")
     st.markdown("---")
     
@@ -234,11 +222,12 @@ elif page == "Continual Learning":
         'Stage': ['Before CL', 'After CL'],
         'Accuracy': [mlp_d2_before['accuracy'].values[0], mlp_d2_after['accuracy'].values[0]],
         'F1-Score': [mlp_d2_before['f1'].values[0], mlp_d2_after['f1'].values[0]]
-    })
+    }).set_index('Stage')
     
-    fig = px.bar(cl_comparison, x='Stage', y=['Accuracy', 'F1-Score'], barmode='group',
-                 title="MLP Performance: Before vs After Continual Learning")
-    st.plotly_chart(fig, use_container_width=True)
+    st.bar_chart(cl_comparison)
+    
+    improvement = mlp_d2_after['accuracy'].values[0] - mlp_d2_before['accuracy'].values[0]
+    st.success(f"✅ Accuracy Improvement: +{improvement:.4f}")
 
 # ============== EXPLAINABILITY ==============
 elif page == "Explainability":
@@ -267,8 +256,6 @@ elif page == "Explainability":
 
 # ============== FINAL INSIGHTS ==============
 elif page == "Final Insights":
-    import plotly.express as px
-    
     st.title("💡 Final Insights & Recommendations")
     st.markdown("---")
     
@@ -290,18 +277,17 @@ elif page == "Final Insights":
     """)
     
     st.markdown("---")
-    st.subheader("Bias-Variance Trade-off Analysis")
+    st.subheader("Model Performance Summary")
+    st.dataframe(perf.groupby('model')[['accuracy', 'f1', 'precision', 'recall']].mean().round(4))
     
-    tradeoff_data = pd.DataFrame({
-        'Model': ['Decision Tree', 'SVM', 'MLP'],
-        'Bias': [0.15, 0.20, 0.18],
-        'Variance': [0.25, 0.10, 0.30]
-    })
-    
-    fig = px.scatter(tradeoff_data, x='Bias', y='Variance', size=[100]*3, text='Model',
-                     title="Bias-Variance Trade-off", size_max=60)
-    fig.update_traces(textposition='top center')
-    st.plotly_chart(fig, use_container_width=True)
+    st.markdown("---")
+    st.subheader("Recommendations")
+    st.write("""
+    ✅ **1. Continuous Monitoring**: Implement drift detection pipeline in production
+    ✅ **2. Model Retraining**: Schedule quarterly fine-tuning on new data
+    ✅ **3. Feature Validation**: Validate top features regularly (Glucose, BP)
+    ✅ **4. A/B Testing**: Test continual learning vs retraining from scratch
+    """)
 
 st.markdown("---")
-st.markdown("Built with ❤️ for Healthcare ML Engineering | Manus Platform")
+st.markdown("Built with ❤️ for Healthcare ML Engineering | Streamlit Cloud Deployment")
