@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 import os
 import sys
-import plotly.graph_objects as go
-import plotly.express as px
 
 # Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -81,6 +79,8 @@ if page == "Home":
 
 # ============== DATA EXPLORER ==============
 elif page == "Data Explorer":
+    import plotly.express as px
+    
     st.title("📊 Data Explorer")
     st.markdown("---")
     
@@ -103,6 +103,8 @@ elif page == "Data Explorer":
 
 # ============== EDA PAGE ==============
 elif page == "EDA":
+    import plotly.express as px
+    
     st.title("📈 Exploratory Data Analysis")
     st.markdown("---")
     
@@ -138,6 +140,8 @@ elif page == "EDA":
 
 # ============== MODEL TRAINING PAGE ==============
 elif page == "Model Training":
+    import plotly.express as px
+    
     st.title("🤖 Model Training & Evaluation")
     st.markdown("---")
     
@@ -160,6 +164,8 @@ elif page == "Model Training":
 
 # ============== CROSS-TEMPORAL EVALUATION ==============
 elif page == "Cross-Temporal Evaluation":
+    import plotly.express as px
+    
     st.title("🔄 Cross-Temporal Evaluation")
     st.markdown("---")
     
@@ -199,6 +205,8 @@ elif page == "Cross-Temporal Evaluation":
 
 # ============== CONTINUAL LEARNING ==============
 elif page == "Continual Learning":
+    import plotly.express as px
+    
     st.title("🔄 Continual Learning")
     st.markdown("---")
     
@@ -259,6 +267,8 @@ elif page == "Explainability":
 
 # ============== FINAL INSIGHTS ==============
 elif page == "Final Insights":
+    import plotly.express as px
+    
     st.title("💡 Final Insights & Recommendations")
     st.markdown("---")
     
