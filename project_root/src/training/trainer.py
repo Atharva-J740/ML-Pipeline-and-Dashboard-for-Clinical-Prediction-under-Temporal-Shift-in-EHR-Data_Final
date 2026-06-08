@@ -7,6 +7,7 @@ from sklearn.svm import SVC
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import accuracy_score, classification_report
+from sklearn.pipeline import Pipeline
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from src.config import config
@@ -51,5 +52,3 @@ class ModelTrainer:
             trained_models[name] = pipeline
             
         return trained_models
-
-from sklearn.pipeline import Pipeline
