@@ -94,13 +94,22 @@ elif page == "Data Explorer":
     st.dataframe(data.head(10), use_container_width=True)
     
     st.subheader("Feature Statistics")
-    st.write(data[config.NUMERICAL_FEATURES].describe())
+    # Get only numeric columns that exist in data
+    numeric_cols = data.select_dtypes(include=[np.number]).columns.tolist()
+    if numeric_cols:
+        st.write(data[numeric_cols].describe())
+    else:
+        st.info("No numeric columns found")
     
     st.subheader("Missing Values")
     missing = data.isnull().sum()
-    missing_pct = (missing / len(data)) * 100
-    missing_df = pd.DataFrame({'Missing Count': missing, 'Percentage': missing_pct}).sort_values('Percentage', ascending=False)
-    st.bar_chart(missing_df['Percentage'])
+    if missing.sum() > 0:
+        missing_pct = (missing / len(data)) * 100
+        missing_df = pd.DataFrame({'Missing Count': missing, 'Percentage': missing_pct}).sort_values('Percentage', ascending=False)
+        missing_df = missing_df[missing_df['Missing Count'] > 0]
+        st.bar_chart(missing_df['Percentage'])
+    else:
+        st.success("✅ No missing values!")
 
 # ============== EDA PAGE ==============
 elif page == "EDA":
@@ -120,12 +129,18 @@ elif page == "EDA":
     
     st.markdown("---")
     st.subheader("Feature Distribution Analysis (Box-plots)")
-    feature_to_plot = st.selectbox("Select Feature for Box-plot", config.NUMERICAL_FEATURES[:5])
-    box_path = os.path.join(config.REPORTS_DIR, f"boxplot_{feature_to_plot}.png")
-    if os.path.exists(box_path):
-        st.image(box_path, use_column_width=True)
+    
+    # Get available numeric features
+    numeric_cols = d1.select_dtypes(include=[np.number]).columns.tolist()
+    if numeric_cols:
+        feature_to_plot = st.selectbox("Select Feature for Box-plot", numeric_cols[:5])
+        box_path = os.path.join(config.REPORTS_DIR, f"boxplot_{feature_to_plot}.png")
+        if os.path.exists(box_path):
+            st.image(box_path, use_column_width=True)
+        else:
+            st.info(f"Box-plot for {feature_to_plot} not found")
     else:
-        st.info(f"Box-plot for {feature_to_plot} not found")
+        st.warning("No numeric features available")
 
     st.markdown("---")
     st.subheader("Drift Analysis")
@@ -207,27 +222,30 @@ elif page == "Continual Learning":
     mlp_d2_before = perf[(perf['model'] == 'MLP') & (perf['dataset'] == 'D2_Test')]
     mlp_d2_after = perf[(perf['model'] == 'MLP_FineTuned') & (perf['dataset'] == 'D2_Test')]
     
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.metric("MLP on D1", f"{mlp_d1['accuracy'].values[0]:.3f}", "Baseline")
-    with col2:
-        st.metric("MLP on D2 (Before CL)", f"{mlp_d2_before['accuracy'].values[0]:.3f}", "Before Fine-tuning")
-    with col3:
-        st.metric("MLP on D2 (After CL)", f"{mlp_d2_after['accuracy'].values[0]:.3f}", "After Fine-tuning")
-    
-    st.markdown("---")
-    st.subheader("Continual Learning Impact")
-    
-    cl_comparison = pd.DataFrame({
-        'Stage': ['Before CL', 'After CL'],
-        'Accuracy': [mlp_d2_before['accuracy'].values[0], mlp_d2_after['accuracy'].values[0]],
-        'F1-Score': [mlp_d2_before['f1'].values[0], mlp_d2_after['f1'].values[0]]
-    }).set_index('Stage')
-    
-    st.bar_chart(cl_comparison)
-    
-    improvement = mlp_d2_after['accuracy'].values[0] - mlp_d2_before['accuracy'].values[0]
-    st.success(f"✅ Accuracy Improvement: +{improvement:.4f}")
+    if len(mlp_d1) > 0 and len(mlp_d2_before) > 0 and len(mlp_d2_after) > 0:
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("MLP on D1", f"{mlp_d1['accuracy'].values[0]:.3f}", "Baseline")
+        with col2:
+            st.metric("MLP on D2 (Before CL)", f"{mlp_d2_before['accuracy'].values[0]:.3f}", "Before Fine-tuning")
+        with col3:
+            st.metric("MLP on D2 (After CL)", f"{mlp_d2_after['accuracy'].values[0]:.3f}", "After Fine-tuning")
+        
+        st.markdown("---")
+        st.subheader("Continual Learning Impact")
+        
+        cl_comparison = pd.DataFrame({
+            'Stage': ['Before CL', 'After CL'],
+            'Accuracy': [mlp_d2_before['accuracy'].values[0], mlp_d2_after['accuracy'].values[0]],
+            'F1-Score': [mlp_d2_before['f1'].values[0], mlp_d2_after['f1'].values[0]]
+        }).set_index('Stage')
+        
+        st.bar_chart(cl_comparison)
+        
+        improvement = mlp_d2_after['accuracy'].values[0] - mlp_d2_before['accuracy'].values[0]
+        st.success(f"✅ Accuracy Improvement: +{improvement:.4f}")
+    else:
+        st.warning("Continual learning data not available")
 
 # ============== EXPLAINABILITY ==============
 elif page == "Explainability":
@@ -278,7 +296,9 @@ elif page == "Final Insights":
     
     st.markdown("---")
     st.subheader("Model Performance Summary")
-    st.dataframe(perf.groupby('model')[['accuracy', 'f1', 'precision', 'recall']].mean().round(4))
+    if len(perf) > 0:
+        perf_summary = perf.groupby('model')[['accuracy', 'f1', 'precision', 'recall']].mean().round(4)
+        st.dataframe(perf_summary)
     
     st.markdown("---")
     st.subheader("Recommendations")
