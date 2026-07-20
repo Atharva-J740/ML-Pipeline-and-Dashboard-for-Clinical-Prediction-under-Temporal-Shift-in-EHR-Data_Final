@@ -1,31 +1,39 @@
+"""Data preprocessing pipeline with imputation and scaling."""
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.impute import SimpleImputer
-import sys
-import os
+import logging
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from src.config import config
+logger = logging.getLogger(__name__)
+
+from src.config.config import NUMERICAL_FEATURES, CATEGORICAL_FEATURES
+
 
 def get_preprocessing_pipeline():
-    # Define numerical transformer
+    """Create preprocessing pipeline for numerical and categorical features.
+    
+    Returns:
+        sklearn ColumnTransformer pipeline
+    """
+    # Numerical pipeline: impute missing values and scale
     numeric_transformer = Pipeline(steps=[
         ('imputer', SimpleImputer(strategy='median')),
         ('scaler', StandardScaler())
     ])
 
-    # Define categorical transformer
+    # Categorical pipeline: impute and one-hot encode
     categorical_transformer = Pipeline(steps=[
         ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
-        ('onehot', OneHotEncoder(handle_unknown='ignore'))
+        ('onehot', OneHotEncoder(handle_unknown='ignore', sparse_output=False))
     ])
 
     # Combine transformers
     preprocessor = ColumnTransformer(
         transformers=[
-            ('num', numeric_transformer, config.NUMERICAL_FEATURES),
-            ('cat', categorical_transformer, config.CATEGORICAL_FEATURES)
+            ('num', numeric_transformer, NUMERICAL_FEATURES),
+            ('cat', categorical_transformer, CATEGORICAL_FEATURES)
         ])
     
+    logger.info("Preprocessing pipeline created")
     return preprocessor

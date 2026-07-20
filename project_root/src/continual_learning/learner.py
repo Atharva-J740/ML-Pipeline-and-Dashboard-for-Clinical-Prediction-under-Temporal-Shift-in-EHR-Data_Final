@@ -1,37 +1,69 @@
+"""Continual learning and model fine-tuning."""
 import joblib
 import os
-import sys
-from sklearn.neural_network import MLPClassifier
-import pandas as pd
+import logging
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from src.config import config
+logger = logging.getLogger(__name__)
+
+from src.config.config import MODELS_DIR
+
 
 class ContinualLearner:
-    def __init__(self, models_dir=config.MODELS_DIR):
+    """Fine-tunes models on new data to adapt to distribution shift."""
+    
+    def __init__(self, models_dir=MODELS_DIR):
+        """Initialize continual learner.
+        
+        Args:
+            models_dir: Directory containing trained base models
+        """
         self.models_dir = models_dir
+        logger.info(f"ContinualLearner initialized. Models dir: {models_dir}")
         
     def fine_tune_mlp(self, X_train_new, y_train_new):
-        # Load the base MLP model
-        mlp_path = os.path.join(self.models_dir, 'MLP_model.joblib')
-        if not os.path.exists(mlp_path):
-            raise FileNotFoundError("Base MLP model not found for fine-tuning.")
+        """Fine-tune MLP model on new data using warm_start.
+        
+        Args:
+            X_train_new: New training features
+            y_train_new: New training labels
             
-        pipeline = joblib.load(mlp_path)
-        mlp = pipeline.named_steps['classifier']
-        
-        # Fine-tune by setting warm_start=True and calling fit again
-        mlp.warm_start = True
-        
-        # Preprocess the new data using the existing preprocessor
-        X_processed = pipeline.named_steps['preprocessor'].transform(X_train_new)
-        
-        # Partial fit or fit with warm_start
-        mlp.fit(X_processed, y_train_new)
-        
-        # Save the updated model
-        updated_path = os.path.join(self.models_dir, '../continual_learning/MLP_fine_tuned.joblib')
-        os.makedirs(os.path.dirname(updated_path), exist_ok=True)
-        joblib.dump(pipeline, updated_path)
-        
-        return pipeline
+        Returns:
+            Updated model pipeline
+            
+        Raises:
+            FileNotFoundError: If base MLP model not found
+        """
+        try:
+            logger.info("Fine-tuning MLP on new data...")
+            
+            mlp_path = os.path.join(self.models_dir, 'MLP_model.joblib')
+            if not os.path.exists(mlp_path):
+                raise FileNotFoundError(f"Base MLP model not found at {mlp_path}")
+            
+            # Load base model
+            pipeline = joblib.load(mlp_path)
+            mlp_classifier = pipeline.named_steps['classifier']
+            preprocessor = pipeline.named_steps['preprocessor']
+            
+            # Enable warm_start for incremental learning
+            mlp_classifier.warm_start = True
+            mlp_classifier.n_iter_no_change_ = None  # Reset for new data
+            
+            # Preprocess new data
+            X_processed = preprocessor.transform(X_train_new)
+            
+            logger.info(f"Fitting MLP with {X_processed.shape[0]} new samples...")
+            mlp_classifier.fit(X_processed, y_train_new)
+            
+            # Save fine-tuned model
+            cl_dir = os.path.join(self.models_dir, '..', 'continual_learning')
+            os.makedirs(cl_dir, exist_ok=True)
+            updated_path = os.path.join(cl_dir, 'MLP_fine_tuned.joblib')
+            joblib.dump(pipeline, updated_path)
+            logger.info(f"Fine-tuned MLP saved to {updated_path}")
+            
+            return pipeline
+            
+        except Exception as e:
+            logger.error(f"Error fine-tuning MLP: {e}")
+            raise
