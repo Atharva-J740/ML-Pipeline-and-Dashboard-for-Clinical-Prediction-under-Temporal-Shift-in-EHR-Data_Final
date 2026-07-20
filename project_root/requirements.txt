@@ -8,3 +8,4 @@ shap==0.42.3
 streamlit==1.26.0
 scipy==1.11.2
 Pillow==10.0.0
+gdown==5.1.0
